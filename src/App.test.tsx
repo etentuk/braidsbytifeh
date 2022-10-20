@@ -4,6 +4,6 @@ import BraidsByTifeh from './BraidsByTifeh';
 
 test('renders learn react link', () => {
   render(<BraidsByTifeh />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const title = screen.getByText('Braids By Tifeh');
+  expect(title).toBeInTheDocument();
 });
