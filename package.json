@@ -4,12 +4,15 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
+    "css": "^3.0.0",
+    "normalize": "^0.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
+    "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
@@ -21,6 +24,7 @@
     "@types/node": "^16.11.66",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
@@ -55,5 +59,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
+    ]
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
