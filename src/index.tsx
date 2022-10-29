@@ -1,6 +1,4 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import BraidsByTifeh from './BraidsByTifeh';
 
 const target = ReactDOM.createRoot(document.getElementById('braidsbytifeh') as HTMLElement);

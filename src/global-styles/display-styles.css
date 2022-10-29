@@ -1,0 +1,25 @@
+.display-flex {
+  display: flex;
+}
+.display-grid {
+  display: grid;
+}
+.display-none {
+  display: none;
+}
+.display-block {
+  display: block;
+}
+.display-inline-block {
+  display: inline-block;
+}
+.display-grid {
+  display: grid;
+}
+
+@media all and (max-width: 576px){
+  .display-none-small-device {
+    display: none;
+  }
+}
+

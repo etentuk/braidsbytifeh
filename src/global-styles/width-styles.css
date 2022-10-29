@@ -1,0 +1,27 @@
+.width-100-percent {
+  width: 100%;
+}
+.width-40 {
+  width: 40px;
+}
+.width-36 {
+  width: 36px;
+}
+.width-10 {
+  width: 10px;
+}
+.max-width-550px {
+  max-width: 550px;
+}
+.max-width-450px {
+  max-width: 450px;
+}
+.max-width-max-content {
+  max-width: max-content;
+}
+.max-width-1700px {
+  max-width: 1700px;
+}
+.width-50px {
+  width: 50px;
+}
