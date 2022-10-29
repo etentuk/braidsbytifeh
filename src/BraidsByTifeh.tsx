@@ -4,7 +4,6 @@ import { RouterProvider } from 'react-router-dom';
 import store from './store/store';
 import router from './Routes';
 import './index.css';
-import './antd-theme/antd-customized.css';
 import './stylesheets';
 
 const BraidsByTifeh: FC = () => (
