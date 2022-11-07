@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import 'antd/dist/antd.css';
 import '../../../index.css';
-import {Container, StyledLayout, StyledContent, StyledCarousel} from "styles/home.styled";
+import {Container, StyledLayout, StyledContent, StyledCarousel} from "../../../styles/home.styled";
 import HeaderComponent from "../../../components/header/header";
 import {Layout} from "antd";
 import BookNowForm from "../../../pages/client/root/forms/BookNowForm";
