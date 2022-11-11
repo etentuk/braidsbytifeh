@@ -4,7 +4,6 @@ import '../../../index.css';
 import {Container, StyledLayout, StyledContent, StyledCarousel} from "../../../styles/home.styled";
 import HeaderComponent from "../../../components/header/header";
 import {Layout} from "antd";
-import BookNowForm from "../../../pages/client/root/forms/BookNowForm";
 
 const {Footer} = Layout;
 
@@ -37,7 +36,7 @@ const Home: FC = () => {
                         <h3 style={contentStyle}>4</h3>
                     </div>
                 </StyledCarousel>
-                <BookNowForm />
+                {/*<BookNowForm />*/}
             </StyledContent>
             <Footer style={{ textAlign: 'center' }}>Vibes by DennekJr</Footer>
         </StyledLayout>

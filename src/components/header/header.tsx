@@ -18,7 +18,7 @@ const HeaderComponent: FC = () => {
                 <Menu
                     theme="dark"
                     mode="horizontal"
-                    defaultSelectedKeys={['2']}
+                    defaultSelectedKeys={['0']}
                     items={menuOptions.map((menuItem, index) => ({
                         key: String(index + 1),
                         label: menuItem,
