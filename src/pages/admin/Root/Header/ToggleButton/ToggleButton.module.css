@@ -1,0 +1,15 @@
+.header-toggle-button {
+  cursor: pointer;
+  transition: color 0.3s;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+}
+
+.header-toggle-button:hover {
+  color: var(--primary-app-color) !important;
+}

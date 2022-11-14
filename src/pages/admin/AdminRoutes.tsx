@@ -4,21 +4,22 @@ import Root from './Root/Root';
 
 const adminRoutes: RouteObject[] = [
   {
+    path: '/admin',
     element: <Root />,
     children: [
       {
-        path: '/admin',
+        path: '',
         element: (
           <div>
             <h1>Admin Route</h1>
           </div>
         ),
       },
+      {
+        path: 'login',
+        element: <Login />,
+      },
     ],
-  },
-  {
-    path: '/admin/login',
-    element: <Login />,
   },
 ];
 

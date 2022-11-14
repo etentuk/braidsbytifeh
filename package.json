@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
+    "antd": "^4.24.1",
     "css": "^3.0.0",
     "normalize": "^0.3.1",
     "react": "^18.2.0",
@@ -34,12 +35,14 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.0",
     "eslint-plugin-react": "^7.31.10",
+    "less": "^4.1.3",
     "typescript": "^4.8.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "less": "lessc --js src/antd-theme/antd-customized.less src/antd-theme/antd-customized.css",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
