@@ -1,6 +1,6 @@
-import adminRoutes from './pages/admin/AdminRoutes';
+import adminRoutes from './AdminRoutes';
 import { createBrowserRouter, RouteObject } from 'react-router-dom';
-import clientRoutes from './pages/client/ClientRoutes';
+import clientRoutes from './ClientRoutes';
 
 const routes: RouteObject[] = [
   ...adminRoutes,

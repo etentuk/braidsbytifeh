@@ -2,8 +2,8 @@ import { FC, StrictMode } from 'react';
 import { Provider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
 import store from './store/store';
-import router from './Routes';
-import "./antd-theme/antd-customized.css";
+import router from './Routes/Routes';
+import './global-styles/antd-theme/antd-customized.css';
 import './stylesheets';
 
 const BraidsByTifeh: FC = () => (
