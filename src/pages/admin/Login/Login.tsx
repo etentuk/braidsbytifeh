@@ -1,5 +1,7 @@
-import { Button, Card, Form, Input } from 'antd';
-import { FC } from 'react';
+// @ts-nocheck
+import { Button, Card, Form, Input, notification, Alert } from 'antd';
+import { FC, useEffect } from 'react';
+import { useLoginAdminUserMutation } from '../../../redux/api/admin/adminUserApi';
 
 const cardStyle: React.CSSProperties = {
   maxWidth: '40rem',
@@ -9,8 +11,20 @@ const cardStyle: React.CSSProperties = {
 };
 
 const Login: FC = () => {
+  const [loginAdminUser, { isLoading, isError, isSuccess }] = useLoginAdminUserMutation();
+
+  useEffect(() => {
+    if (isSuccess) {
+      notification.success({
+        message: 'Successfully logged in.',
+        placement: 'top',
+      });
+    }
+  }, [isLoading]);
+
   const onFinish = (values: any): any => {
-    console.log('Success:', values);
+    const res = loginAdminUser(values);
+    console.log(res);
   };
 
   const onFinishFailed = (errorInfo: any): any => {
@@ -19,6 +33,7 @@ const Login: FC = () => {
 
   return (
     <Card className="align-items-center" style={cardStyle}>
+      {isError && <Alert message="Incorrect Username or Password" type="error" closable />}
       <Form
         name="basic"
         labelCol={{ span: 8 }}
