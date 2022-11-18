@@ -1,3 +1,13 @@
 .container {
   background: #fff!important ;
 }
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.logoutButton {
+  margin: auto auto 5rem auto;
+}

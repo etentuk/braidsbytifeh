@@ -1,6 +1,5 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
-import AppLoader from './../components/Loading/AppLoader/AppLoader';
 import { SuspendElement } from './SuspendElement';
 
 const Root = lazy(async () => await import('../pages/Admin/Root/Root'));
@@ -24,10 +23,6 @@ const adminRoutes: RouteObject[] = [
         element: <SuspendElement element={<Login />} />,
       },
     ],
-  },
-  {
-    path: 'loader',
-    element: <AppLoader />,
   },
 ];
 

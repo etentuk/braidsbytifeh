@@ -1,7 +1,7 @@
-// @ts-nocheck
 import { Button, Card, Form, Input, notification, Alert } from 'antd';
 import { FC, useEffect } from 'react';
 import { useLoginAdminUserMutation } from '../../../redux/api/admin/adminUserApi';
+import { useNavigate } from 'react-router-dom';
 
 const cardStyle: React.CSSProperties = {
   maxWidth: '40rem',
@@ -10,8 +10,14 @@ const cardStyle: React.CSSProperties = {
   border: 'none',
 };
 
+interface FormValues {
+  email: string;
+  password: string;
+}
+
 const Login: FC = () => {
   const [loginAdminUser, { isLoading, isError, isSuccess }] = useLoginAdminUserMutation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isSuccess) {
@@ -19,16 +25,12 @@ const Login: FC = () => {
         message: 'Successfully logged in.',
         placement: 'top',
       });
+      navigate('/admin');
     }
   }, [isLoading]);
 
-  const onFinish = (values: any): any => {
-    const res = loginAdminUser(values);
-    console.log(res);
-  };
-
-  const onFinishFailed = (errorInfo: any): any => {
-    console.log('Failed:', errorInfo);
+  const onFinish = (values: FormValues): void => {
+    void loginAdminUser(values);
   };
 
   return (
@@ -39,8 +41,7 @@ const Login: FC = () => {
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
         initialValues={{ remember: true }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
+        onFinish={values => onFinish(values)}
         autoComplete="off">
         <Form.Item label="Email" name="email" rules={[{ required: true, message: 'Please input your email address!' }]}>
           <Input />

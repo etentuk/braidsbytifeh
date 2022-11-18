@@ -1,0 +1,8 @@
+.ant-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-menu {
+  flex: 1
+}

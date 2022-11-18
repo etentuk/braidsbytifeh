@@ -1,3 +1,7 @@
 :root {
   --primary-app-color: #fb6b90;
 }
+
+iframe {
+  display: none
+}
