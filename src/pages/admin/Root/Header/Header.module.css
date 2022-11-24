@@ -1,5 +1,5 @@
 .container {
-  background: #fff !important;
+  background:  var(--app-background-color) !important;
   display: flex;
   padding: 0 !important;
 }

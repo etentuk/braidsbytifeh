@@ -23,7 +23,7 @@ export const adminUserApi = createApi({
       }),
       invalidatesTags: [{ type: 'AdminUser', id: 'loggedIn' }],
     }),
-    getLoggedInUser: builder.query<IAdminUser, null>({
+    getLoggedInAdminUser: builder.query<IAdminUser, null>({
       query: () => ({
         url: '/me',
         method: 'get',
@@ -36,4 +36,4 @@ export const adminUserApi = createApi({
   }),
 });
 
-export const { useLoginAdminUserMutation, useGetLoggedInUserQuery, useLogoutAdminUserMutation } = adminUserApi;
+export const { useLoginAdminUserMutation, useGetLoggedInAdminUserQuery, useLogoutAdminUserMutation } = adminUserApi;

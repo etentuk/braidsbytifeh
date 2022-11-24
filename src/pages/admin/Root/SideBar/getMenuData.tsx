@@ -6,7 +6,7 @@ const getMenuData = (): MenuProps['items'] => [
   {
     label: <Link to="/admin">Dashboard</Link>,
     key: 'dashboard',
-    icon: <DesktopOutlined />,
+    icon: <DesktopOutlined style={{fontSize: '1.5rem'}} />,
   },
 ];
 

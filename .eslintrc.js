@@ -11,5 +11,7 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   plugins: ['react', 'prettier'],
-  rules: {},
+  rules: {
+    '@typescript-eslint/strict-boolean-expressions': 'off',
+  },
 };

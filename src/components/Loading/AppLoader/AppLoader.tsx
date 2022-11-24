@@ -1,12 +1,14 @@
+import AppLogo from 'components/AppLogo';
 import { FC } from 'react';
-import logo from './../../../assets/logo_no_bg_no_circle.png';
 import styles from './AppLoader.module.css';
 
 const AppLoader: FC = () => {
   return (
-    <div className="display-flex flex-1 margin-auto">
+    <div
+      className="display-flex flex-1 margin-auto width-100-percent justify-content-center align-items-center"
+      style={{ backgroundColor: 'var(--app-background-color)' }}>
       <div className={styles['app-loader-logo']}>
-        <img src={logo} alt="Loading Logo" />
+        <AppLogo />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import ToggleIcon from './ToggleIcon';
 import styles from './ToggleButton.module.css';
+import { Button } from 'antd';
 
 interface ToggleButtonProps {
   toggleCollapsed: () => void;
@@ -9,9 +10,12 @@ interface ToggleButtonProps {
 
 const ToggleButton: FC<ToggleButtonProps> = ({ toggleCollapsed, collapsed }) => {
   return (
-    <button type="button" onClick={toggleCollapsed} className={styles['header-toggle-button']}>
-      <ToggleIcon collapsed={collapsed} />
-    </button>
+    <Button
+      type="text"
+      onClick={toggleCollapsed}
+      className={styles['header-toggle-button']}
+      icon={<ToggleIcon collapsed={collapsed} />}
+    />
   );
 };
 

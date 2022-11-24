@@ -1,13 +1,6 @@
 .header-toggle-button {
-  cursor: pointer;
-  transition: color 0.3s;
-  outline: none;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  align-items: center;
+  background-color: transparent !important;
+  margin: auto 0;
 }
 
 .header-toggle-button:hover {

@@ -1,5 +1,5 @@
 .container {
-  background: #fff!important ;
+  background:  var(--app-background-color) !important;
 }
 .menuContainer {
   display: flex;
@@ -10,4 +10,6 @@
 
 .logoutButton {
   margin: auto auto 5rem auto;
+  font-size: 1.5rem;
+  background-color: var(--app-background-color);
 }
