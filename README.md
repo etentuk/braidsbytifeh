@@ -6,12 +6,6 @@ Before running npm install, create a .env file and add `SKIP_PREFLIGHT_CHECK=tru
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## AntD Theme
-
-The styling customization is gotten from [The Simple Way to Customize Ant Design in React-Scripts](https://www.stefanwille.com/2021/05/2021-05-09-react-scripts-ant-design-customization)
-
-Visit the [AntD Docs](https://ant.design/docs/react/customize-theme) for more on how to customize the theme
-
 ## Available Scripts
 
 In the project directory, you can run:
