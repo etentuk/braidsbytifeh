@@ -1,0 +1,8 @@
+.header-toggle-button {
+  background-color: transparent !important;
+  margin: auto 0;
+}
+
+.header-toggle-button:hover {
+  color: var(--primary-app-color) !important;
+}

@@ -5,3 +5,6 @@ import './global-styles/margin-styles.css';
 import './global-styles/padding-styles.css';
 import './global-styles/position-styles.css';
 import './global-styles/width-styles.css';
+import './global-styles/height-styles.css';
+import './global-styles/font-styles.css';
+import './global-styles/general.css';

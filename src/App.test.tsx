@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import BraidsByTifeh from './BraidsByTifeh';
+import App from './App';
 
-test('renders learn react link', () => {
-  render(<BraidsByTifeh />);
+test('App renders correctly', () => {
+  render(<App />);
   const title = screen.getByText('Braids By Tifeh');
   expect(title).toBeInTheDocument();
 });

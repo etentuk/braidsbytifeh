@@ -1,0 +1,25 @@
+:root {
+  --primary-app-color: #fb6b90;
+  --app-background-color: #fff;
+    transition: all ease-in;
+
+}
+
+[app-theme='dark']{
+  --primary-app-color: #fb6b90;
+  --app-background-color: #141414;
+  transition: all ease-in 2s;
+}
+
+
+iframe {
+  display: none
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--app-background-color)
+}
