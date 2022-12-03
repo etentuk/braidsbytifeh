@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
-import { SuspendElement } from '../../Routes/SuspendElement';
+import { SuspendElement } from '../../routes/SuspendElement';
 import { urls } from '../../global-constants';
 import ErrorPage from 'components/AppError/ErrorPage';
 import { ErrorStatus } from 'components/AppError/constants';
