@@ -1,7 +1,6 @@
 import { Button, Card, Form, Input, notification, Alert } from 'antd';
 import { FC, useEffect } from 'react';
 import { useLoginAdminUserMutation } from '../../../redux/api/admin/adminUserApi';
-import { useNavigate } from 'react-router-dom';
 
 const cardStyle: React.CSSProperties = {
   maxWidth: '40rem',
@@ -17,7 +16,6 @@ interface FormValues {
 
 const Login: FC = () => {
   const [loginAdminUser, { isLoading, isError, isSuccess }] = useLoginAdminUserMutation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (isSuccess) {
@@ -25,7 +23,6 @@ const Login: FC = () => {
         message: 'Successfully logged in.',
         placement: 'top',
       });
-      navigate('/admin');
     }
   }, [isLoading]);
 
@@ -37,7 +34,8 @@ const Login: FC = () => {
     <Card className="align-items-center" style={cardStyle}>
       {isError && <Alert message="Incorrect Username or Password" type="error" closable />}
       <Form
-        name="basic"
+        data-testid="loginForm"
+        name="login"
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
         initialValues={{ remember: true }}

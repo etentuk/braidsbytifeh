@@ -1,12 +1,13 @@
 import { RouteObject } from 'react-router-dom';
-import Home from '../../pages/Client/Root/Home';
+import Home from './Root/Home';
+import { urls } from '../../global-constants';
 
 const clientRoutes: RouteObject[] = [
   {
     element: <Home />,
     children: [
       {
-        path: '/',
+        path: urls.client.root,
         element: <div>Home</div>,
       },
     ],

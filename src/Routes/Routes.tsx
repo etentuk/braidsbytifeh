@@ -1,6 +1,6 @@
-import adminRoutes from './Admin/AdminRoutes';
+import adminRoutes from '../pages/Admin';
 import { createBrowserRouter, RouteObject } from 'react-router-dom';
-import clientRoutes from './Client/ClientRoutes';
+import clientRoutes from '../pages/Client';
 import ErrorPage from 'components/AppError/ErrorPage';
 import { ErrorStatus } from 'components/AppError/constants';
 
@@ -15,4 +15,5 @@ const routes: RouteObject[] = [
 
 const router = createBrowserRouter(routes);
 
+export { routes };
 export default router;

@@ -1,7 +1,9 @@
 import AppConfig from 'AppConfig';
 import { FC, StrictMode } from 'react';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
+import { setupStore } from './redux/store';
+
+const store = setupStore({});
 
 const App: FC = () => (
   <StrictMode>

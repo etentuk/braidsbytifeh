@@ -1,37 +1,37 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 import { IAdminUser } from './types';
-import { axiosBaseQuery, baseURL } from '../../../api/apiRequest';
+import { endpoints, axiosBaseQuery } from 'tools';
 
 export const adminUserApi = createApi({
   reducerPath: 'adminUserApi',
-  baseQuery: axiosBaseQuery({ baseUrl: `${baseURL}/admin` }),
+  baseQuery: axiosBaseQuery(),
   tagTypes: ['AdminUser'],
   endpoints: builder => ({
     loginAdminUser: builder.mutation({
       query: body => ({
-        url: '/login',
+        url: endpoints.admin.login,
         method: 'post',
         data: body,
         withCredentials: true,
       }),
-      invalidatesTags: [{ type: 'AdminUser', id: 'loggedIn' }],
+      invalidatesTags: ['AdminUser'],
     }),
     logoutAdminUser: builder.mutation({
       query: () => ({
-        url: '/logout',
+        url: endpoints.admin.logout,
         method: 'get',
       }),
-      invalidatesTags: [{ type: 'AdminUser', id: 'loggedIn' }],
+      invalidatesTags: ['AdminUser'],
     }),
     getLoggedInAdminUser: builder.query<IAdminUser, null>({
       query: () => ({
-        url: '/me',
+        url: endpoints.admin.getLoggedInUser,
         method: 'get',
       }),
       transformResponse: (result: { data: { user: IAdminUser } }) => {
         return result.data.user;
       },
-      providesTags: [{ type: 'AdminUser', id: 'loggedIn' }],
+      providesTags: ['AdminUser'],
     }),
   }),
 });

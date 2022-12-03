@@ -1,27 +1,9 @@
 import { BaseQueryFn } from '@reduxjs/toolkit/dist/query';
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 
-const baseURL =
-  process.env.NODE_ENV === 'development'
-    ? `${process.env.REACT_APP_BACKEND_URL_DEV as string}`
-    : `${process.env.REACT_APP_BACKEND_URL_PROD as string}`;
-
-const token = 'dummy';
-
-const axiosInstance = axios.create({
-  baseURL: `${baseURL}`,
-  headers: {
-    Authorization: `Bearer ${token}`,
-    Accept: 'application/json',
-    'Access-Control-Allow-Origin': '*',
-  },
-});
-
-const apiRequest = axiosInstance;
-
 const axiosBaseQuery =
   (
-    { baseUrl }: { baseUrl: string } = { baseUrl: baseURL },
+    { baseURL }: { baseURL: string } = { baseURL: '' },
   ): BaseQueryFn<
     {
       url: string;
@@ -34,7 +16,7 @@ const axiosBaseQuery =
   > =>
   async ({ url, method, data, params }) => {
     try {
-      const result = await axios({ url: baseUrl + url, method, data, params, withCredentials: true });
+      const result = await axios({ url: baseURL + url, method, data, params, withCredentials: true });
       return { data: result.data };
     } catch (axiosError) {
       const err = axiosError as AxiosError;
@@ -47,4 +29,4 @@ const axiosBaseQuery =
     }
   };
 
-export { apiRequest, baseURL, axiosBaseQuery };
+export default axiosBaseQuery;
