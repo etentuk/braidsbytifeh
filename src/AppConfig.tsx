@@ -1,6 +1,6 @@
 import { RouterProvider } from 'react-router-dom';
 import { ConfigProvider, theme } from 'antd';
-import router from 'routes/Routes';
+import router from 'routesTemp/Routes';
 import './stylesheets';
 import { ToggleThemeButton } from 'components';
 import { FC } from 'react';

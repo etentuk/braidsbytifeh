@@ -7,7 +7,7 @@ import { setupStore } from '../../redux/store';
 import type { PreloadedState } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/dist/query';
 import type { AppStore, RootState } from '../../redux/utils/redux.types';
-import { routes } from 'routes/Routes';
+import { routes } from 'routesTemp/Routes';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
