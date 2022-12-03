@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import BraidsByTifeh from './BraidsByTifeh';
 
 const target = ReactDOM.createRoot(document.getElementById('braidsbytifeh') as HTMLElement);
-target.render(<App />);
+target.render(<BraidsByTifeh />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

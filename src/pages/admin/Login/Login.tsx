@@ -1,61 +1,49 @@
-import { Button, Card, Form, Input, notification, Alert } from 'antd';
-import { FC, useEffect } from 'react';
-import { useLoginAdminUserMutation } from '../../../redux/api/admin/adminUserApi';
+/* eslint-disable */
+import { FC } from 'react';
+import styled from 'styled-components';
+import LoginForm from './LoginForm';
+import logo from './../../../assets/Tifehs.jpg';
 
-const cardStyle: React.CSSProperties = {
-  maxWidth: '40rem',
-  margin: 'auto',
-  justifyContent: 'center',
-  border: 'none',
-};
+const LoginContainer = styled.div`
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2e4e9;
+`;
 
-interface FormValues {
-  email: string;
-  password: string;
-}
+const LoginCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 5px 5px #c7c1c3;
+`;
+
+const Logo = styled.img`
+  max-height: 100%;
+  max-width: 100%;
+`;
+
+const LogoContainer = styled.div`
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+`;
 
 const Login: FC = () => {
-  const [loginAdminUser, { isLoading, isError, isSuccess }] = useLoginAdminUserMutation();
-
-  useEffect(() => {
-    if (isSuccess) {
-      notification.success({
-        message: 'Successfully logged in.',
-        placement: 'top',
-      });
-    }
-  }, [isLoading]);
-
-  const onFinish = (values: FormValues): void => {
-    void loginAdminUser(values);
-  };
-
   return (
-    <Card className="align-items-center" style={cardStyle}>
-      {isError && <Alert message="Incorrect Username or Password" type="error" closable />}
-      <Form
-        data-testid="loginForm"
-        name="login"
-        labelCol={{ span: 8 }}
-        wrapperCol={{ span: 16 }}
-        initialValues={{ remember: true }}
-        onFinish={values => onFinish(values)}
-        autoComplete="off">
-        <Form.Item label="Email" name="email" rules={[{ required: true, message: 'Please input your email address!' }]}>
-          <Input />
-        </Form.Item>
-
-        <Form.Item label="Password" name="password" rules={[{ required: true, message: 'Please input your password!' }]}>
-          <Input.Password />
-        </Form.Item>
-
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
-      </Form>
-    </Card>
+    <LoginContainer>
+      <LoginCard>
+        <LogoContainer>
+          <Logo src={logo} style={{ height: '100%' }} />
+        </LogoContainer>
+        <LoginForm />
+      </LoginCard>
+    </LoginContainer>
   );
 };
 
