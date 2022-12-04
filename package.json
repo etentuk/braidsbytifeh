@@ -50,7 +50,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --verbose --watch",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "nuke-cache": "rm -rf node_modules/cache"
   },
   "eslintConfig": {
     "extends": [
