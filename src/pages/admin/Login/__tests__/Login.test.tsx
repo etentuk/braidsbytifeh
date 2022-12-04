@@ -1,4 +1,4 @@
-import { rtlRender, screen, waitFor } from "test-utils";
+import { rtlRender, screen, waitFor } from "tools/react-testing-library/test-utils";
 import userEvent from "@testing-library/user-event";
 import Login from "../Login";
 import { endpoints } from "tools";
