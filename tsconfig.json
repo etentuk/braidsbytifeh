@@ -17,8 +17,8 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
-      "test-utils": ["./lib/react-testing-library/test-utils"]
+      "test-utils": ["./tools/react-testing-library/test-utils"]
     }
   },
-  "include": ["src", "./src/setupTests.ts"]
+  "include": ["src"]
 }
