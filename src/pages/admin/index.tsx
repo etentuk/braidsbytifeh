@@ -5,7 +5,7 @@ import { urls } from '../../global-constants';
 import ErrorPage from 'components/AppError/ErrorPage';
 import { ErrorStatus } from 'components/AppError/constants';
 
-const Root = lazy(async () => await import('../../layout/Admin/Root'));
+const Root = lazy(async () => await import('../../layout/admin/Root'));
 const Login = lazy(async () => await import('./Login/Login'));
 const Dashboard = lazy(async () => await import('./Dashboard/Dashboard'));
 

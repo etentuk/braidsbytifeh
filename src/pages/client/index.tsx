@@ -1,5 +1,5 @@
 import { RouteObject } from 'react-router-dom';
-import Home from '../../layout/Client/Root/Home';
+import Home from '../../layout/client/Root/Home';
 import { urls } from '../../global-constants';
 
 const clientRoutes: RouteObject[] = [

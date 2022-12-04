@@ -1,6 +1,6 @@
-import adminRoutes from '../pages/Admin';
+import adminRoutes from '../pages/admin';
 import { createBrowserRouter, RouteObject } from 'react-router-dom';
-import clientRoutes from '../pages/Client';
+import clientRoutes from '../pages/client';
 import ErrorPage from 'components/AppError/ErrorPage';
 import { ErrorStatus } from 'components/AppError/constants';
 
