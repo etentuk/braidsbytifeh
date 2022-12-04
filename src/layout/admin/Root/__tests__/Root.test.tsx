@@ -1,4 +1,4 @@
-import { rtlRender } from "test-utils";
+import { rtlRender } from "tools/react-testing-library/test-utils";
 import { MemoryRouter } from "react-router";
 import Root from "..";
 import { endpoints } from "tools";
