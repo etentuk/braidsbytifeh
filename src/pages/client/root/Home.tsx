@@ -1,45 +1,41 @@
 import { FC } from 'react';
 import 'antd/dist/antd.css';
 import '../../../index.css';
-import {Container, StyledLayout, StyledContent, StyledCarousel} from "../../../styles/home.styled";
+import {
+    Container,
+    StyledSwiper,
+    StyledSwiperSlide
+} from "../../../styles/home.styled";
 import HeaderComponent from "../../../components/header/header";
+import 'swiper/css';
+import FooterComponent from "../../../components/footer/footer";
 import {Layout} from "antd";
 
-const {Footer} = Layout;
-
-const contentStyle: React.CSSProperties = {
-    height: '100%',
-    color: '#000',
-    fontSize: '60px',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: 'rgba(242, 208, 221, 0.4)',
-};
+const {Content} = Layout;
 
 const Home: FC = () => {
   return (
     <Container>
-        <StyledLayout>
-            <HeaderComponent />
-            <StyledContent className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
-                <StyledCarousel>
-                    <div>
-                        <h3 style={contentStyle}>1</h3>
-                    </div>
-                    <div>
-                        <h3 style={contentStyle}>2</h3>
-                    </div>
-                    <div>
-                        <h3 style={contentStyle}>3</h3>
-                    </div>
-                    <div>
-                        <h3 style={contentStyle}>4</h3>
-                    </div>
-                </StyledCarousel>
-                {/*<BookNowForm />*/}
-            </StyledContent>
-            <Footer style={{ textAlign: 'center' }}>Vibes by DennekJr</Footer>
-        </StyledLayout>
+            <StyledSwiper
+                autoplay
+                spaceBetween={0}
+                allowSlideNext
+                allowTouchMove
+                allowSlidePrev
+                slidesPerView={1}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+            >
+                <HeaderComponent />
+                <StyledSwiperSlide imgUrl={"https://wallpaperaccess.com/full/3045155.jpg"}></StyledSwiperSlide>
+                <StyledSwiperSlide imgUrl={"https://images.unsplash.com/photo-1579634151863-8ddedd098251?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1911&q=80"}></StyledSwiperSlide>
+                <StyledSwiperSlide imgUrl={"https://images.unsplash.com/photo-1524635391473-6ecec8288f3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1912&q=80"}></StyledSwiperSlide>
+                <StyledSwiperSlide imgUrl={"https://images.unsplash.com/photo-1535833156427-f3ad51b8451f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80"}></StyledSwiperSlide>
+                <Content>
+
+                </Content>
+                <FooterComponent />
+            </StyledSwiper>
     </Container>
   );
 };

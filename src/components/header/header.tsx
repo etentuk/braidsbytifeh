@@ -1,15 +1,15 @@
 import { FC } from 'react';
 import 'antd/dist/antd.css';
 import '../../index.css';
-import {Layout, Menu} from "antd";
+import {Badge, Menu} from "antd";
 import TifesLogo from "../../assets/Tifehs.jpg";
-
-const { Header } = Layout;
+import {StyledHeaderContainer} from "../../styles/header.styled";
+import {ShoppingCartOutlined} from "@ant-design/icons";
 
 const HeaderComponent: FC = () => {
     const menuOptions = ["Home", "Services", "Book Appointment", "Gallery"];
     return (
-            <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+            <StyledHeaderContainer>
                 <div>
                     <img className="logo"
                          src={TifesLogo}
@@ -24,7 +24,12 @@ const HeaderComponent: FC = () => {
                         label: menuItem,
                     }))}
                 />
-            </Header>
+                <div className="navIcons">
+                    <Badge count={0} showZero>
+                        <ShoppingCartOutlined />
+                    </Badge>
+                </div>
+            </StyledHeaderContainer>
     );
 };
 

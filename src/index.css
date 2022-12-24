@@ -7,7 +7,6 @@
   float: left;
   width: 64px;
   /*height: 31px;*/
-  margin: 16px 24px 16px 0;
   background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
   -webkit-background-size: cover; /* for Safari 3.0 - 4.0 , Chrome 1.0 - 3.0 */
   -moz-background-size: cover; /* optional for Firefox 3.6 */
