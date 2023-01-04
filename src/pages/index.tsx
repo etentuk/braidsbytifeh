@@ -1,8 +1,8 @@
 import { RouteObject } from 'react-router-dom';
-import Home from '../../layout/client/Root/Home';
-import { urls } from '../../global-constants';
+import Home from '../layout/Root/Home';
+import { urls } from '../global-constants';
 
-const clientRoutes: RouteObject[] = [
+const pages: RouteObject[] = [
   {
     element: <Home />,
     children: [
@@ -14,4 +14,4 @@ const clientRoutes: RouteObject[] = [
   },
 ];
 
-export default clientRoutes;
+export default pages;

@@ -1,12 +1,10 @@
-import adminRoutes from '../pages/admin';
 import { createBrowserRouter, RouteObject } from 'react-router-dom';
-import clientRoutes from '../pages/client';
+import pages from '../pages';
 import ErrorPage from 'components/AppError/ErrorPage';
 import { ErrorStatus } from 'components/AppError/constants';
 
 const routes: RouteObject[] = [
-  ...adminRoutes,
-  ...clientRoutes,
+  ...pages,
   {
     path: '*',
     element: <ErrorPage status={ErrorStatus.NOT_FOUND} />,

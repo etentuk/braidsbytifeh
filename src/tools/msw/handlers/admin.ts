@@ -17,7 +17,7 @@ const adminHandlers = [
 
   rest.get(endpoints.admin.logout, (req, res, ctx) => {
     return res(ctx.status(200), ctx.delay(500), ctx.cookie('admin-token', ''));
-  }),
+  }), 
 
   /**
    * Get Admin User
